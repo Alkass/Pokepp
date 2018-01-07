@@ -1,5 +1,7 @@
 # Pokepp
 
+> <i>Check out [Alkass/Poke](https://github.com/Alkass/Poke) for details</i>
+
 ## Getting Started
 ```cpp
 #include "../poke/poke.h"
