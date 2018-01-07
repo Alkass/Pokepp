@@ -1,8 +1,8 @@
 # Pokepp
 
-> <i>Check out [Alkass/Poke](https://github.com/Alkass/Poke) for details</i>
-
 ## Getting Started
+> <i>This is the C++ version of [Alkass/Poke](https://github.com/Alkass/Poke)</i>
+
 ```cpp
 #include "../poke/poke.h"
 
