@@ -89,5 +89,5 @@ void TestCaseInterface::startTests() {
 }
 
 TestCaseInterface::~TestCaseInterface() {
-  // Nothing to be done at this point
+  delete this->test_cases;
 }
