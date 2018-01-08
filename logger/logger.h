@@ -6,13 +6,13 @@
 using std::cout;
 using std::endl;
 
-typedef enum {
+enum LogType {
   FATAL = 0,
   ERROR,
   WARN,
   INFO,
   PASS
-} LogType;
+};
 
 class Logger {
 public:
