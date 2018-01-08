@@ -1,8 +1,7 @@
 # Pokepp
-
-## Getting Started
 > <i>This is the C++ version of [Alkass/Poke](https://github.com/Alkass/Poke)</i>
 
+## Getting Started
 ```cpp
 #include "../poke/poke.h"
 
