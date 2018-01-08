@@ -7,7 +7,7 @@
 #include "../poke/poke.h"
 
 TestCaseStatus testCase(Logger* l) {
-  return TestCaseStatus::PASSED; // other valid values are FAILED and UNKNOWN
+  return PASSED; // other valid values are FAILED and UNKNOWN
 }
 
 int main() {
@@ -17,7 +17,7 @@ int main() {
     "on_success Test Case",
     "No Criteria",
     [](Logger* logger) -> TestCaseStatus {
-      return TestCaseStatus::PASSED;
+      return PASSED;
     },
     NULL,
     NULL
@@ -27,7 +27,7 @@ int main() {
     "on_failure Test Case",
     "No Criteria",
     [](Logger* logger) -> TestCaseStatus {
-      return TestCaseStatus::PASSED;
+      return PASSED;
     },
     NULL,
     NULL
