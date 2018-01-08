@@ -51,7 +51,7 @@ bool TestCaseInterface::runTest(TestCase* test_case) {
   cout << "Running " << test_case->title << " (" << test_case->criteria << ")" << endl;
   Logger logger;
   TestCaseStatus status = test_case->test(&logger);
-  if (status == TestCaseStatus::UNKNOWN) {
+  if (status == UNKNOWN) {
     if (logger.fatal || logger.error) {
       return false;
     }
@@ -59,7 +59,7 @@ bool TestCaseInterface::runTest(TestCase* test_case) {
       return true;
     }
   }
-  return status == TestCaseStatus::PASSED;
+  return status == PASSED;
 }
 
 bool TestCaseInterface::runTests(TestCase* test_case) {
@@ -81,7 +81,7 @@ void TestCaseInterface::startTests() {
   }
   for (vector<TestCase*>::iterator it = this->test_cases->begin(); it != this->test_cases->end(); it++) {
     if (!(*it)) {
-      printf("TestCase object is NULL. Ignoring");
+      cout << "TestCase object is NULL. Ignoring" << endl;
       continue;
     }
     this->runTests(*it);
