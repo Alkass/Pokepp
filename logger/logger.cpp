@@ -13,23 +13,23 @@ Logger::Logger() {
 
 void Logger::log(LogType log_type, const char* format, ...) {
   switch (log_type) {
-    case LogType::FATAL:
+    case FATAL:
       this->fatal++;
       printf("  \033[1;31mFATAL\033[0;00m: ");
       break;
-    case LogType::ERROR:
+    case ERROR:
       this->error++;
       printf("  \033[0;31mERROR\033[0;00m: ");
       break;
-    case LogType::WARN:
+    case WARN:
       this->warning++;
       printf("  \033[1;33mWARN\033[0;00m:  ");
       break;
-    case LogType::INFO:
+    case INFO:
       this->info++;
       printf("  \033[0;34mINFO\033[0;00m:  ");
       break;
-    case LogType::PASS:
+    case PASS:
       this->pass++;
       printf("  \033[0;32mPASS\033[0;00m:  ");
       break;
