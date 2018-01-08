@@ -1,11 +1,11 @@
 #include "poke.h"
 
 __attribute__((constructor)) void init_poke() {
-  printf("--- Starting Tests ---\n\n");
+  cout << "--- Starting Tests ---" << endl << endl;
 }
 
 __attribute__((destructor)) void kill_poke() {
-  printf("\n--- Testing Ended ---\n");
+  cout << endl << "--- Testing Ended ---" << endl;
 }
 
 TestCase::TestCase(string title, string criteria, TestCaseStatus (*test)(Logger*), TestCase* on_success, TestCase* on_failure) {
