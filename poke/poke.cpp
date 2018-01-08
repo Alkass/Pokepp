@@ -51,8 +51,13 @@ bool TestCaseInterface::runTest(TestCase* test_case) {
   cout << "Running " << test_case->title << " (" << test_case->criteria << ")" << endl;
   Logger logger;
   TestCaseStatus status = test_case->test(&logger);
-  if (status == TestCaseStatus::UNKNOWN && (logger.fatal + logger.error)) {
-    return false;
+  if (status == TestCaseStatus::UNKNOWN) {
+    if (logger.fatal + logger.error) {
+      return false;
+    }
+    else {
+      return true;
+    }
   }
   return status == TestCaseStatus::PASSED;
 }
