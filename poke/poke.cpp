@@ -52,7 +52,7 @@ bool TestCaseInterface::runTest(TestCase* test_case) {
   Logger logger;
   TestCaseStatus status = test_case->test(&logger);
   if (status == TestCaseStatus::UNKNOWN) {
-    if (logger.fatal + logger.error) {
+    if (logger.fatal || logger.error) {
       return false;
     }
     else {
