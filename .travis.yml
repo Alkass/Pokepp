@@ -3,7 +3,6 @@ sudo: required
 dist: trusty
 compiler:
 - g++
-- clang
 os:
 - linux
 - osx
