@@ -8,7 +8,7 @@ __attribute__((destructor)) void kill_poke() {
   cout << endl << "--- Testing Ended ---" << endl;
 }
 
-TestCase::TestCase(string title, string criteria, TestCaseStatus (*test)(Logger*), TestCase* on_success, TestCase* on_failure) {
+TestCase::TestCase(string title, string criteria, TestCaseStatus (*test)(Logger*), TestCase* on_success = NULL, TestCase* on_failure = NULL) {
   this->setTitle(title);
   this->setCriteria(criteria);
   this->setTest(test);
