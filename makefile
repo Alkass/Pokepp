@@ -1,6 +1,6 @@
 objs: logger/logger.o poke/poke.o
 
-*.o: %.cpp
+%.o: %.cpp
 	g++ -std=gnu++11 -c -o $@ $?
 
 test: objs tests/test.o
