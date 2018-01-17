@@ -24,7 +24,7 @@ public:
   TestCaseStatus (*test)(Logger*);
   TestCase* on_success;
   TestCase* on_failure;
-  TestCase(string, string, TestCaseStatus (*test)(Logger*), TestCase*, TestCase*);
+  TestCase(string, string, TestCaseStatus (*test)(Logger*), TestCase* = NULL, TestCase* = NULL);
   void setTitle(string);
   void setCriteria(string);
   void setTest(TestCaseStatus (*test)(Logger*));

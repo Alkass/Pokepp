@@ -17,9 +17,7 @@ int main() {
     "No Criteria",
     [](Logger* logger) -> TestCaseStatus {
       return PASSED;
-    },
-    NULL,
-    NULL
+    }
   );
 
   TestCase* on_failure = new TestCase(
@@ -27,9 +25,7 @@ int main() {
     "No Criteria",
     [](Logger* logger) -> TestCaseStatus {
       return PASSED;
-    },
-    NULL,
-    NULL
+    }
   );
 
   tci.registerNewTest(new TestCase("Test Case 1", "Test Case Criteria", testCase, on_success, on_failure));
